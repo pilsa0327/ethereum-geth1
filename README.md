@@ -77,15 +77,13 @@ ex)
 
 
 ### D. 트랜잭션 발생하기  
-   `> eth.sendTransaction({from: 보내는 계정, to: 받는 계정, value: 전송량})`  
-      트랜잭션 발생
-
-   -> 이더를 보내는 계정의 status가 Locked 상태이면 트랜잭션 발생 시 에러 발생    
-   -> `personal.unlockAccount`(계정, 비밀번호) : 해당 계정 잠금 해제  
-
-  `> eth.getTransaction(트랜잭션 해시)` : 트랜잭션 조회    
+  `> eth.sendTransaction({from: 보내는 계정, to: 받는 계정, value: 전송량})`:트랜잭션 발생  
+  -> 이더를 보내는 계정의 status가 Locked 상태이면 트랜잭션 발생 시 에러 발생     
+  -> `personal.unlockAccount`(계정, 비밀번호) : 해당 계정 잠금 해제   
+  
+  `> eth.getTransaction(트랜잭션 해시)` : 트랜잭션 조회  
   `> eth.pendingTransactions` : pending 상태 트랜잭션 조회  
-  --> 이 과정까지는 단순히 트랜잭션을 발생했을 뿐, 실제적으로는 트랜잭션이 처리되지 않아서
+  --> 이 과정까지는 단순히 트랜잭션을 발생했을 뿐, 실제적으로는 트랜잭션이 처리되지 않아서  
       이더 전송이 되지 않음.
 
 ### E. 트랜잭션 처리(마이닝)  
